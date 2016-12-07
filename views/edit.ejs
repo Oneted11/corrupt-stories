@@ -1,0 +1,8 @@
+<% include _header %>
+<h1>Edit your story</h1>
+<form action="/edit" method="post">
+<input name="displayname" type="text" class="form-control" placeholder="Title" value="<%= currentUser.displayName || "" %>">
+<textarea name="bio" class="form-control" placeholder="Tell us your story!"><%= currentUser.bio || "" %></textarea>
+<input type="submit" value="Update" class="btn btn-primary btn-block">
+</form>
+<% include _footer %>
